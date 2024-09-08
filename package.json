@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "mockoon-cli start --data ./tonjooTest.json --port 8000"
+  },
+  "dependencies": {
+    "@mockoon/cli": "^8.4.0"
   }
 }
