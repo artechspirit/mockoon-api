@@ -1,0 +1,7 @@
+{
+  "name": "mockoon-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "mockoon-cli start --data ./tonjooTest.json --port 8000"
+  }
+}

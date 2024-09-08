@@ -1,0 +1,140 @@
+{
+  "uuid": "0240bd14-9115-4c94-ab5c-6ce2cf3e310d",
+  "lastMigration": 32,
+  "name": "TonjooTest",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+      {
+          "uuid": "7fba0b98-4197-46e5-8e8a-bd61666b0fc0",
+          "type": "crud",
+          "documentation": "",
+          "method": "",
+          "endpoint": "users",
+          "responses": [
+              {
+                  "uuid": "b96a5dc9-cd5a-4dc4-8780-0bdc83fa22d6",
+                  "body": "{}",
+                  "latency": 0,
+                  "statusCode": 200,
+                  "label": "",
+                  "headers": [],
+                  "bodyType": "DATABUCKET",
+                  "filePath": "",
+                  "databucketID": "7k6f",
+                  "sendFileAsBody": false,
+                  "rules": [],
+                  "rulesOperator": "OR",
+                  "disableTemplating": false,
+                  "fallbackTo404": false,
+                  "default": true,
+                  "crudKey": "id",
+                  "callbacks": []
+              }
+          ],
+          "responseMode": null
+      },
+      {
+          "uuid": "7117d9ad-a8f7-40b1-81d9-859c820e3013",
+          "type": "crud",
+          "documentation": "",
+          "method": "",
+          "endpoint": "kontrak",
+          "responses": [
+              {
+                  "uuid": "1b4095b1-24ee-406e-aa71-91d2d3c01ee2",
+                  "body": "{}",
+                  "latency": 0,
+                  "statusCode": 200,
+                  "label": "",
+                  "headers": [],
+                  "bodyType": "DATABUCKET",
+                  "filePath": "",
+                  "databucketID": "4xe9",
+                  "sendFileAsBody": false,
+                  "rules": [],
+                  "rulesOperator": "OR",
+                  "disableTemplating": false,
+                  "fallbackTo404": false,
+                  "default": true,
+                  "crudKey": "id",
+                  "callbacks": []
+              }
+          ],
+          "responseMode": null
+      }
+  ],
+  "rootChildren": [
+      {
+          "type": "route",
+          "uuid": "7fba0b98-4197-46e5-8e8a-bd61666b0fc0"
+      },
+      {
+          "type": "route",
+          "uuid": "7117d9ad-a8f7-40b1-81d9-859c820e3013"
+      }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+      "enabled": false,
+      "type": "CERT",
+      "pfxPath": "",
+      "certPath": "",
+      "keyPath": "",
+      "caPath": "",
+      "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+      {
+          "key": "Content-Type",
+          "value": "application/json"
+      },
+      {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+      },
+      {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+      },
+      {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+      }
+  ],
+  "proxyReqHeaders": [
+      {
+          "key": "",
+          "value": ""
+      }
+  ],
+  "proxyResHeaders": [
+      {
+          "key": "",
+          "value": ""
+      }
+  ],
+  "data": [
+      {
+          "uuid": "9f6db85a-4f8a-4049-a06b-4125608a29f6",
+          "id": "7k6f",
+          "name": "Users",
+          "documentation": "",
+          "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"username\": \"johndoe\",\r\n    \"phone\": \"08562342223\",\r\n    \"gender\": \"Male\",\r\n    \"tempat_lahir\": \"New York\",\r\n    \"tanggal_lahir\": \"1990-05-15\",\r\n    \"bank\": \"BRI\",\r\n    \"no_rekening\": \"4234\",\r\n    \"status\": \"Married\",\r\n    \"alamat\": \"123 Main St, New York\"\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Jane Smith\",\r\n    \"email\": \"jane.smith@example.com\",\r\n    \"username\": \"janesmith\",\r\n    \"phone\": \"08562342234\",\r\n    \"gender\": \"Female\",\r\n    \"tempat_lahir\": \"Los Angeles\",\r\n    \"tanggal_lahir\": \"1985-08-20\",\r\n    \"bank\": \"BCA\",\r\n    \"no_rekening\": \"67890\",\r\n    \"status\": \"Single\",\r\n    \"alamat\": \"456 Elm St, Los Angeles\"\r\n  }\r\n]"
+      },
+      {
+          "uuid": "248ef633-7747-4878-8e38-3e996dd137d4",
+          "id": "4xe9",
+          "name": "Kontrak",
+          "documentation": "",
+          "value": "[\r\n  {\r\n    \"user_id\": 1,\r\n    \"kontraks\": [\r\n      {\r\n        \"masa_berlaku_start\": \"09/08/2023\",\r\n        \"masa_berlaku_end\": \"09/12/2023\",\r\n        \"golongan_pajak\": 2,\r\n        \"bpjs\": [1,2],\r\n        \"posisi\": 6,\r\n        \"cuti_pertahun\": 14,\r\n        \"jenis_kontrak\": 1,\r\n        \"minim_jam\": 20,\r\n        \"catatan\" : \"dummy catatan 1\",\r\n        \"pendapatans\": [\r\n          {\r\n            \"nama_pendapatan\": 1,\r\n            \"tipe_pendapatan\": 3,\r\n            \"nominal\": 20000\r\n          },\r\n          {\r\n            \"nama_pendapatan\": 2,\r\n            \"tipe_pendapatan\": 1,\r\n            \"nominal\": 25000\r\n          },\r\n          {\r\n            \"nama_pendapatan\": 1,\r\n            \"tipe_pendapatan\": 2,\r\n            \"nominal\": 32000\r\n          }\r\n        ],\r\n        \"potongans\": [\r\n          {\r\n            \"nama_potongan\": 2,\r\n            \"tipe_potongan\": 2,\r\n            \"nominal\": 40000\r\n          },\r\n          {\r\n            \"nama_potongan\": 1,\r\n            \"tipe_potongan\": 1,\r\n            \"nominal\": 15000\r\n          },\r\n          {\r\n            \"nama_potongan\": 2,\r\n            \"tipe_potongan\": 1,\r\n            \"nominal\": 12000\r\n          }\r\n        ]\r\n      },\r\n      {\r\n        \"masa_berlaku_start\": \"11/08/2023\",\r\n        \"masa_berlaku_end\": \"09/12/2023\",\r\n        \"golongan_pajak\": 3,\r\n        \"bpjs\": [2],\r\n        \"posisi\": 2,\r\n        \"cuti_pertahun\": 12,\r\n        \"jenis_kontrak\": 2,\r\n        \"minim_jam\": 20,\r\n        \"catatan\" : \"dummy catatan 2\",\r\n        \"pendapatans\": [\r\n          {\r\n            \"nama_pendapatan\": 2,\r\n            \"tipe_pendapatan\": 1,\r\n            \"nominal\": 10000\r\n          },\r\n          {\r\n            \"nama_pendapatan\": 1,\r\n            \"tipe_pendapatan\": 3,\r\n            \"nominal\": 25000\r\n          },\r\n          {\r\n            \"nama_pendapatan\": 2,\r\n            \"tipe_pendapatan\": 2,\r\n            \"nominal\": 32000\r\n          }\r\n        ],\r\n        \"potongans\": [\r\n          {\r\n            \"nama_potongan\": 2,\r\n            \"tipe_potongan\": 1,\r\n            \"nominal\": 40000\r\n          },\r\n          {\r\n            \"nama_potongan\": 1,\r\n            \"tipe_potongan\": 2,\r\n            \"nominal\": 15000\r\n          },\r\n          {\r\n            \"nama_potongan\": 3,\r\n            \"tipe_potongan\": 2,\r\n            \"nominal\": 12000\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"user_id\": 2,\r\n    \"kontraks\": [\r\n      {\r\n        \"masa_berlaku_start\": \"10/01/2023\",\r\n        \"masa_berlaku_end\": \"10/01/2024\",\r\n        \"golongan_pajak\": 5,\r\n        \"bpjs\": [1,3],\r\n        \"posisi\": 7,\r\n        \"cuti_pertahun\": 13,\r\n        \"jenis_kontrak\": 3,\r\n        \"minim_jam\": 20,\r\n        \"catatan\" : \"dummy catatan 3\",\r\n        \"pendapatans\": [\r\n          {\r\n            \"nama_pendapatan\": 1,\r\n            \"tipe_pendapatan\": 2,\r\n            \"nominal\": 8000\r\n          },\r\n          {\r\n            \"nama_pendapatan\": 2,\r\n            \"tipe_pendapatan\": 1,\r\n            \"nominal\": 3000\r\n          }\r\n        ],\r\n        \"potongans\": [\r\n          {\r\n            \"nama_potongan\": 2,\r\n            \"tipe_potongan\": 1,\r\n            \"nominal\": 1500\r\n          },\r\n          {\r\n            \"nama_potongan\": 1,\r\n            \"tipe_potongan\": 1,\r\n            \"nominal\": 200\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+      }
+  ],
+  "callbacks": []
+}
